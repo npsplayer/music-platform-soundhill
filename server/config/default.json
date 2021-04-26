@@ -1,0 +1,9 @@
+{
+    "serverPort": 5000,
+    "dbUrl": "mongodb+srv://NPS:Pa$$w0rd@soundhill.elvrw.mongodb.net/soundHill?retryWrites=true&w=majority",
+    "secretKeyJWT": "SoundHillJWT",
+    "AWS_KEY_ID": "AKIAWU47T5JZ3UQ6ADUY",
+    "AWS_SECRET_KEY": "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",
+    "AWS_BUKET_NAME": "soundhill-platform"
+
+}
