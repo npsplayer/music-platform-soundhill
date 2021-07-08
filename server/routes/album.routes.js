@@ -18,12 +18,12 @@ router.get('/newrelease',
             let album;
             if (page) {
                 if (page > 1) {
-                    album = await Album.find({ status: 'active' }).populate('artist').populate('genre').skip((page - 1) * 5).limit(page * 5);
+                    album = await Album.find({}).populate('artist').populate('genre').skip((page - 1) * 5).sort({ dateRelease: -1 }).limit(page * 10);
                 } else {
-                    album = await Album.find({ status: 'active' }).populate('artist').populate('genre').limit(5);
+                    album = await Album.find({}).populate('artist').populate('genre').sort({ dateRelease: -1 }).limit(5);
                 }
             } else {
-                album = await Album.find({ status: 'active' }).populate('artist').populate('genre').limit(5);
+                album = await Album.find({}).populate('artist').populate('genre').sort({ dateRelease: -1 }).limit(5);
             }
             return res.json(album);
         } catch (e) {
